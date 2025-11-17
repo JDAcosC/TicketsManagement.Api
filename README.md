@@ -1,8 +1,8 @@
-#Technical Test
+### Technical Test
 
 Technical test
 
-##🚀 ##Quick Start
+### 🚀 Quick Start
 
 ### Prerequisites
 
