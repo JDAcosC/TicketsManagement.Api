@@ -6,14 +6,14 @@ Technical test
 
 ### Prerequisites
 
--Docker Desktop installed and running
+- Docker Desktop installed and running
 
--Ports 8080 and 1433 available on your machine
+- Ports 8080 and 1433 available on your machine
 
 ### Run the project
 
-git clone [URL]
-cd TicketsManagement.Api
+-git clone [URL]
+- cd TicketsManagement.Api
 
 docker compose up --build -d
 
