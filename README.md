@@ -1,22 +1,24 @@
-# Prueba Técnica
+#Technical Test
 
-Prueba técnica
+Technical test
 
+🚀 Quick Start
 ## 🚀 Inicio Rápido
 
-### Prerequisitos
+### Prerequisites
 
-- Docker Desktop instalado y ejecutándose
-- Puertos 8080 y 1433 libres en tu máquina
+-Docker Desktop installed and running
 
-### Ejecutar el proyecto
+-Ports 8080 and 1433 available on your machine
 
-```bash
+### Run the project
 
 git clone [URL]
 cd TicketsManagement.Api
 
-
 docker compose up --build -d
+
+Once the containers are running enter the following link to test the API:
+localhost:8080/swagger/index.html
 
 ```
