@@ -12,7 +12,7 @@ Technical test
 
 ### Run the project
 
--git clone [URL]
+- git clone [URL]
 - cd TicketsManagement.Api
 
 docker compose up --build -d
