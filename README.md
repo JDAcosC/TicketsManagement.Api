@@ -2,8 +2,7 @@
 
 Technical test
 
-🚀 Quick Start
-## 🚀 Inicio Rápido
+##🚀 Quick Start
 
 ### Prerequisites
 
