@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>66cf568d-6757-4783-8b94-c525aca47dbb</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TicketsManagement.Application\TicketsManagement.Application.csproj" />
+    <ProjectReference Include="..\TicketsManagement.Domain\TicketsManagement.Domain.csproj" />
+    <ProjectReference Include="..\TicketsManagement.Infrastructure\TicketsManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

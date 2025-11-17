@@ -1,0 +1,35 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: tickets_sql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+      - SA_PASSWORD=Sql2024!Strong
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+    networks:
+      - tickets_net
+  api:
+    build:
+      context: .
+      dockerfile: TicketsManagement.Api/Dockerfile
+    container_name: tickets_api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=TicketsDb;User Id=sa;Password=Sql2024!Strong;TrustServerCertificate=True;Encrypt=False;
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sqlserver
+    networks:
+      - tickets_net
+    restart: on-failure
+networks:
+  tickets_net:
+    driver: bridge
+volumes:
+  sql_data:
